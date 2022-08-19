@@ -1,0 +1,46 @@
+{
+    "data" : [
+    {
+        "id": 0,
+        "day": "Sunday",
+        "dayKr": "일요일",
+        "trash" : "종이류, 불에 안타는 쓰레기"
+    },
+    {
+        "id": 1,
+        "day": "Monday",
+        "dayKr": "월요일",
+        "trash" : "플라스틱류, 비닐류"
+    },
+    {
+        "id": 2,
+        "day": "Tuesday",
+        "dayKr": "화요일",
+        "trash" : "플라스틱류"
+    },
+    {
+        "id": 3,
+        "day": "Wednesday",
+        "dayKr": "수요일",
+        "trash" : "종이류, 불에 안타는 쓰레기"
+    },
+    {
+        "id": 4,
+        "day": "Thursday",
+        "dayKr": "목요일",
+        "trash" : "플라스틱류"
+    },
+    {
+        "id": 5,
+        "day": "Friday",
+        "dayKr": "금요일",
+        "trash" : "종이류, 비닐류"
+    },
+    {
+        "id": 6,
+        "day": "Saturday",
+        "dayKr": "토요일",
+        "trash" : "플라스틱류"
+    }
+]
+}
