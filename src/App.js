@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+// import '.reset.css';
+// import './App1.css';
+import { createGlobalStyle } from 'styled-components';
+import React, {useState} from 'react';
+import Todaytrash from './Components/todaytrash'
+import Header from './Components/header'
+import Sidebar from './Components/sidebar';
+import Howtotrash from './Components/howtotrash';
+
+
+
+
 
 function App() {
+  const [date, setDate] = useState((new Date).getDay()) ;
+  const handleDate = (date)=>{setDate(date)}
+
+
+
+ 
+  
+
+  const [open, setState] = useState("sideBar")
+  const mouseClick = ()=> {
+      setState("sideBar-on");}
+  const mouseOver = ()=>setState("sideBar-on")
+  const mouseOut = ()=>setState("sideBar")
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <Header mouseClick={mouseClick} open={open}/>
+        <Sidebar handleDate={handleDate}/>
+        <Todaytrash mouseOut={mouseOut} date={date}/>
+        <Howtotrash />
+      </div>
+    </>
   );
 }
+
 
 export default App;
