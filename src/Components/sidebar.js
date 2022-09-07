@@ -1,13 +1,21 @@
 import React, {useState} from "react";
 import dummy from "../DB/trashdata.json";
 import paperbin from "../image/paperbin.png"
+import classnames from "classnames";
+import { StyledComponent } from "styled-components";
 
+
+// @todayBg {
+
+// }
 
 
 
 function Sidebar({handleDate}){
     const todaydate = (new Date).getDay()
     const weeklytrash = dummy.data;
+    console.log(todaydate)
+  // const todayClassBg = 
   
 
 
@@ -21,15 +29,16 @@ return (
 
           </div> */}
           {weeklytrash.map((item,idx) => (
-            <div className = "chooseDay font-medium p-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900 items-center align-items-center justify-center text-white"  key={item.id} id={item.id}
+            <div className = {item.id+" chooseDay hover:text-slate-900 hover:bg-slate-100 font-medium p-3"}  key={item.id}
                 onClick={()=>handleDate(idx)}>
-                {item.dayKr}
+                {item.dayKr}<img src={item.image}/>
                  {/* <br></br>  */}
                  {/* {item.day} */}
-                 <img className="items-center justify-items-center" alt="#" src={paperbin}/> {/* 이미지 state에 따라서 다르게 넣기 */}
+                 {/* <img className="items-center justify-items-center" alt="#" src={paperbin}/> 이미지 state에 따라서 다르게 넣기 */}
 
             </div>
           ))}
+
 
       </nav>  
     // {/* </div> */}

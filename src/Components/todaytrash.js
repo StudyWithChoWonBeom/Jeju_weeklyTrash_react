@@ -10,22 +10,12 @@ import dummy from "../DB/trashdata.json";
   // console.log(weeklytrash)
   let whatday = weeklytrash[date].dayKr
   let whattrash = weeklytrash[date].trash
-  // const howtotrash = dummy.howto.filter( function(elements, index, array) {
-  //   if (array.id = "2, 6") {
-  //     // console.log(array.id)
-  //     // console.log(elements.value)
-  //     // console.log(elements.value.toString())
-  //     // console.log(typeof(elements.value))
-  //     // console.log(elements.value.toString())
-  //     // console.log(typeof(elements.value.toString()))
-  //     console.log(Object.getOwnPropertyDescriptor(JSON.stringify(elements.value)))
-  //     return
-  //   }
+  const plz = dummy.howto.filter((item,index,array)=>{return array[0]})
+  console.log(plz[0])
+  
+  
 
-  // }
-    
 
-  //  )
 
   return (
       <div className="selectedBox" onClick={mouseOut} >
