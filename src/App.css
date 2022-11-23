@@ -23,34 +23,36 @@ time, mark, audio, video {
 
 }
 
-.container {
+/* .container {
   display:grid;
   align-items: stretch;
   justify-content: stretch;
   align-content: stretch;
   justify-items: stretch;
   grid-template-areas: 
-  "header header header"
+  ". header ."
+  ". side ."
   ". main . ";
   grid-template-rows: minmax(100px, auto) ;
   grid-template-columns: 1 1 1;
-}
+} */
 .title {
-  
   grid-area:header;
-  grid-column: 1/4;
-  grid-row : 1/2;
   display:flex;
   flex: 1 1 auto;
-  position: fixed;
-  height: 80px;
-  width: 100%;
+  width: 70%;
+  height: 4rem;
+  background-color: #34d399;
+  margin: auto;
+  margin-top: 1rem;
   align-items: center;
+  justify-content: center;
   z-index: 0;
+  padding: 1rem;
 }
 .title-contents {
-  background-color: green;
-  width: 60%;
+  width: fit-content;
+  font-size: 2rem;
 }
 .titleToday {
   text-align: right;
@@ -58,71 +60,56 @@ time, mark, audio, video {
   background-color: blue;
   width: 20%;
 }
-.sideBar-content {
-  width: 20%;
-}
-.sideBarButton {
-  width: 44px;
-  height: 44px;
-  background-color: red;
-  z-index: 1;
-}
 .side {
-  display: block;
-}
-.sideBar {
-  position: fixed;
-  background-color: #fff;
-  margin-left: -100%;
-  border-right: 1px solid #ddd;
-  top: 0;
-  height: 100%;
-  width: 150px;
-  text-align: center;
-  padding-right: 0;
-  z-index: 10000;
-  -webkit-transition-duration: .3s;
-       -o-transition-duration: .3s;
-          transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in;
-       -o-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  width: 260px;
-}
-.sideBar-on {
-  top:0;
-  height: 100%;
-  margin-left: 0;
-  position:fixed;
-  z-index: 10000;
-  background-color: #fff;
-  width: 150px;
-  border: 2px solid black
+  grid-area: side;
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #34d399;
+  flex-grow: 1;
+  padding: .5rem;
+  justify-content: space-around;
 }
 .chooseDay {
   text-align: center;
-  margin: 0;
+  font-size: 1.2rem;
   border-width: 3px white;
   border-style: solid;
-  width: 150px;
-  list-style: none;
-  padding: 0;
-
-  
+  width: 12%;
+  height: 2rem;
+  border-radius: 10px;
 }
-
+.chooseDay:hover {
+  background-color: white;
+}
+.chooseDay:active {
+  border: white;
+}
 .selectedTrash {
   list-style: none;
 }
 
 .selectedBox {
-  grid-area: main;
-  /* z-index: 1; */
   display: block;
-  padding: 20px;
-  width: 80%;
-  border: 3px solid black;
+  margin: auto;
+  width: 70%;
   justify-content: center;
   align-items: center;
   height: 60%;
+  /* background-color: #34d399; */
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.selectedDay {
+  font-size: 2rem;
+}
+.selectedTrash {
+  font-size: 1.5rem;
 }

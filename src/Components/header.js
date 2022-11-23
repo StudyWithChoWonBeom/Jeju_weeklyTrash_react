@@ -8,7 +8,7 @@ const data = dummy.data
 //custom hook 짜기 ㅡㅡ
     return (
         <div>
-            <header className = "title">
+            <div className = "title">
                 {/* <div className="sideBar-content">
                     <button className="sideBarButton" onClick={props.mouseClick}></button>
                 </div> */}
@@ -18,11 +18,11 @@ const data = dummy.data
                 <h1 className="title-contents">
                     제주 쓰레기 분리수거
                 </h1>
-                <div className = "title-today">
+                {/* <div className = "title-today">
                     
-                    {/* 오늘은 {dummy.data[(new Date).getDay()].dayKr} 입니다. */}
-                </div>
-            </header>
+                    오늘은 {dummy.data[(new Date).getDay()].dayKr} 입니다.
+                </div> */}
+            </div>
         </div>
     )
 }

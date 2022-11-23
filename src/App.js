@@ -1,5 +1,5 @@
 // import '.reset.css';
-// import './App1.css';
+import './App.css';
 import { createGlobalStyle } from 'styled-components';
 import React, {useState} from 'react';
 import Todaytrash from './Components/todaytrash'
@@ -29,12 +29,12 @@ function App() {
 
   return (
     <>
-      <div className='container'>
+      {/* <div className='container'> */}
         <Header mouseClick={mouseClick} open={open}/>
         <Sidebar handleDate={handleDate}/>
         <Todaytrash mouseOut={mouseOut} date={date}/>
-        <Howtotrash />
-      </div>
+        {/* <Howtotrash /> */}
+      {/* </div> */}
     </>
   );
 }
